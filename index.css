@@ -1,5 +1,6 @@
 :root {
 	--main-h1-color: #02c288;
+	--main-h2-color: #ca5454;
 	--bg-gradient-color: #080212;
 }
 
@@ -120,6 +121,30 @@ nav a:hover {
 #skills, #projects, #contact {
 	margin:4vh 0px !important;
 	padding:2vh 0px !important;
+}
+
+#skill-cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	background-color: #0e051e;
+	color: #f1f1f1;
+	width: 350px;
+	margin: 10px;
+	border-radius: 16px;
+	padding-left: 20px;
+}
+
+.skill h2 {
+	font-size: 32px;
+	color: var(--main-h2-color);
+}
+
+.skill li {
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 #contact form {
