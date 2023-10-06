@@ -1,12 +1,13 @@
 import { Octokit } from 'octokit';
 import { processTopic, sortTopics } from '$lib/util/topicsUtil';
+import type { Repo } from '$lib/types';
 
 const octokit = new Octokit({
 	auth: import.meta.env.VITE_GITHUB_API_KEY
 });
 
 export const getPortolioRepos = async () => {
-	const repos = (
+	const repos: Repo[] = (
 		await octokit.request('GET /user/repos', {
 			per_page: 100
 		})
