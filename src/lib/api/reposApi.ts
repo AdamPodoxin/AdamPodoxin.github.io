@@ -1,19 +1,9 @@
 import { Octokit } from 'octokit';
+import { processTopic, sortTopics } from '$lib/util/topicsUtil';
 
 const octokit = new Octokit({
 	auth: import.meta.env.VITE_GITHUB_API_KEY
 });
-
-const processTopic = (str: string) => {
-	if (str === 'csharp') {
-		return 'C#';
-	}
-
-	return str
-		.split('-')
-		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-		.join(' ');
-};
 
 export const getPortolioRepos = async () => {
 	const repos = (
@@ -28,7 +18,8 @@ export const getPortolioRepos = async () => {
 			tags:
 				repo.topics
 					?.filter((topic) => topic !== 'for-portfolio')
-					.map((topic) => processTopic(topic)) || [],
+					.sort(sortTopics)
+					.map(processTopic) || [],
 			homepage: repo.homepage!,
 			repo: repo.private ? null : repo.html_url
 		}));
