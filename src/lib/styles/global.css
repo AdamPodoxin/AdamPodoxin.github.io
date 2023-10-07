@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
+
+:root {
+	--text: #eaf0fa;
+	--background: #09152a;
+	--primary: #2e68cc;
+	--secondary: #0e203e;
+	--accent: #4479d5;
+}
+
 body {
-	background-color: red;
+	font-family: 'Poppins';
+	font-weight: 400;
+	background-color: var(--background);
+	color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+
+html {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 3.053rem; /* 48.8px */
+}
+
+h2 {
+	font-size: 2.442rem; /* 39.04px */
+}
+
+h3 {
+	font-size: 1.954rem; /* 31.2px */
+}
+
+h4 {
+	font-size: 1.563rem; /* 24.96px */
+}
+
+h5 {
+	font-size: 1.25rem; /* 20px */
+}
+
+small {
+	font-size: 0.8rem; /* 12.8px */
 }
