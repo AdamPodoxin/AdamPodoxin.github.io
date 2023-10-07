@@ -12,6 +12,12 @@ export const processTopic = (str: string) => {
 			return 'TypeScript';
 		case 'nextjs':
 			return 'Next.js';
+		case 'nodejs':
+			return 'Node.js';
+		case 'discordjs':
+			return 'Discord.js';
+		case 'fly':
+			return 'Fly.io';
 		default:
 			return str
 				.split('-')
@@ -25,23 +31,28 @@ const topicsOrder = [
 	'css',
 	'javascript',
 	'typescript',
+	'nodejs',
 	'react',
 	'nextjs',
 	'vercel',
+	'firebase',
+	'supabase',
 	'unity',
 	'c#',
 	'blender',
 	'photoshop',
 	'premiere-pro',
-	'audacity'
-];
-
+	'audacity',
+	'flutter',
+	'dart',
+	'discordjs',
+	'python',
+	'flask'
+] as const;
 const topicsOrderMap = new Map<string, number>();
-for (let i = 0; i < topicsOrder.length; i++) {
-	topicsOrderMap.set(topicsOrder[i], i);
-}
+topicsOrder.forEach((topic, i) => topicsOrderMap.set(topic, i + 1));
 
-const getTopicPriority = (topic: string) => topicsOrderMap.get(topic) || -1;
+const getTopicPriority = (topic: string) => topicsOrderMap.get(topic) || topicsOrder.length;
 
 export const sortTopics = (topic1: string, topic2: string) =>
 	getTopicPriority(topic1) - getTopicPriority(topic2);
