@@ -3,5 +3,5 @@ export type Repo = {
 	description: string;
 	tags: string[];
 	homepage: string;
-	repo: string | null;
+	repoUrl: string | null;
 };

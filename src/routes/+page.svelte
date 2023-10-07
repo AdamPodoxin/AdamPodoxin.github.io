@@ -19,32 +19,65 @@
 		<h4>Versatile programmer and perpetual learner</h4>
 	</section>
 
-	<section class="icons">
-		<a href="mailto:adam.podoxin@gmail.com" target="_blank" rel="noreferrer"><Mail /></a>
-		<a href="https://github.com/AdamPodoxin" target="_blank" rel="noreferrer"><GitHub /></a>
+	<section class="links">
+		<a href="mailto:adam.podoxin@gmail.com" target="_blank" referrerpolicy="no-referrer">
+			<Mail />
+		</a>
+		<a href="https://github.com/AdamPodoxin" target="_blank" referrerpolicy="no-referrer">
+			<GitHub />
+		</a>
 	</section>
 </header>
 
-<section class="repos">
-	{#each repos as repo}
-		<Repo {repo} />
-	{/each}
-</section>
+<main>
+	<h3>Projects</h3>
+	<section class="projects">
+		{#each repos as repo}
+			<Repo {repo} />
+		{/each}
+	</section>
+</main>
 
 <style>
 	.title {
 		margin: 32px;
 	}
 
-	h1,
-	h4 {
+	.title > h1,
+	.title > h4 {
 		text-align: center;
 		margin: 8px;
 	}
 
-	.icons {
+	.title > h4 {
+		color: var(--text-secondary);
+	}
+
+	.links {
 		display: flex;
 		justify-content: center;
 		gap: 32px;
+	}
+
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		main {
+			padding: 0 64px;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		main {
+			padding: 0 8px;
+		}
+
+		.projects {
+			flex-direction: column;
+		}
 	}
 </style>

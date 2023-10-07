@@ -22,7 +22,7 @@ export const getPortolioRepos = async () => {
 				.sort(sortTopics)
 				.map(processTopic),
 			homepage: repo.homepage!,
-			repo: repo.private ? null : repo.html_url
+			repoUrl: repo.private ? null : repo.html_url
 		}))
 		.sort(sortRepos);
 
