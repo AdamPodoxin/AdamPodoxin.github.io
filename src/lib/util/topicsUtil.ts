@@ -18,6 +18,8 @@ export const processTopic = (str: string) => {
 			return 'Discord.js';
 		case 'fly':
 			return 'Fly.io';
+		case 'sveltekit':
+			return 'SvelteKit';
 		default:
 			return str
 				.split('-')
@@ -52,7 +54,7 @@ const topicsOrder = [
 const topicsOrderMap = new Map<string, number>();
 topicsOrder.forEach((topic, i) => topicsOrderMap.set(topic, i + 1));
 
-const getTopicPriority = (topic: string) => topicsOrderMap.get(topic) || topicsOrder.length;
+const getTopicPriority = (topic: string) => topicsOrderMap.get(topic) || topicsOrder.length + 1;
 
 export const sortTopics = (topic1: string, topic2: string) =>
 	getTopicPriority(topic1) - getTopicPriority(topic2);
