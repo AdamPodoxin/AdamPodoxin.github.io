@@ -74,7 +74,7 @@
 
 	@media only screen and (min-width: 768px) {
 		.repo {
-			width: 500px;
+			width: 380px;
 		}
 	}
 </style>

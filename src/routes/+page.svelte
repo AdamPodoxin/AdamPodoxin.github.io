@@ -8,6 +8,8 @@
 	import Mail from '$lib/icons/Mail.svelte';
 
 	import '$lib/styles/global.css';
+	// import '$lib/styles/colors-green.css';
+	import '$lib/styles/colors-blue.css';
 
 	export let data: PageData;
 	const { repos } = data;

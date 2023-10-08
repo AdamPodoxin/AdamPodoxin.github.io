@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
 
-:root {
-	--text: #d9f7e9;
-	--text-secondary: #bdc9c4;
-	--background: #0e1310;
-	--primary: #219c62;
-	--secondary: #072215;
-	--accent: #2bca80;
-}
-
 body {
 	font-family: 'Poppins';
 	font-weight: 400;
