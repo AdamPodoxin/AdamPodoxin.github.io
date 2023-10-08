@@ -5,3 +5,8 @@ export type Repo = {
 	homepage: string;
 	repoUrl: string | null;
 };
+
+export type Skill = {
+	title: string;
+	tools: string[];
+};

@@ -1,7 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
+	import { skills } from '$lib/constants/skills';
 	import Repo from '$lib/components/Repo.svelte';
+	import Skill from '$lib/components/Skill.svelte';
 	import GitHub from '$lib/icons/GitHub.svelte';
 	import Mail from '$lib/icons/Mail.svelte';
 
@@ -28,11 +30,22 @@
 </header>
 
 <main>
-	<h3>Projects</h3>
-	<section class="projects">
-		{#each repos as repo}
-			<Repo {repo} />
-		{/each}
+	<section>
+		<h3>Projects</h3>
+		<section class="projects">
+			{#each repos as repo}
+				<Repo {repo} />
+			{/each}
+		</section>
+	</section>
+
+	<section>
+		<h3>Skills</h3>
+		<section class="skills">
+			{#each skills as skill}
+				<Skill {skill} />
+			{/each}
+		</section>
 	</section>
 </main>
 
@@ -57,10 +70,15 @@
 		gap: 32px;
 	}
 
-	.projects {
+	.projects,
+	.skills {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 16px;
+	}
+
+	main > section {
+		margin: 64px 0;
 	}
 
 	@media only screen and (min-width: 768px) {
