@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
 
 :root {
-	--text: #eaf0fa;
-	--text-secondary: #bdc1c9;
-	--background: #09152a;
-	--primary: #2e68cc;
-	--secondary: #0e203e;
-	--accent: #4479d5;
+	--text: #d9f7e9;
+	--text-secondary: #bdc9c4;
+	--background: #0e1310;
+	--primary: #219c62;
+	--secondary: #072215;
+	--accent: #2bca80;
 }
 
 body {

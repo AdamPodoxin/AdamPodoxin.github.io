@@ -67,6 +67,7 @@
 
 	.tag {
 		background-color: var(--primary);
+		color: white;
 		padding: 4px 8px;
 		border-radius: 12px;
 	}

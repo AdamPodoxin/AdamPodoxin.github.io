@@ -9,8 +9,6 @@
 
 	export let data: PageData;
 	const { repos } = data;
-
-	console.log(repos);
 </script>
 
 <header>
