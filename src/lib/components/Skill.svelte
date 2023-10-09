@@ -6,11 +6,11 @@
 
 <div class="skill">
 	<h5 class="title">{skill.title}</h5>
-	<ul class="toolsList">
+	<section class="tools">
 		{#each skill.tools as tool}
-			<li>{tool}</li>
+			<span class="tool">{tool}</span>
 		{/each}
-	</ul>
+	</section>
 </div>
 
 <style>
@@ -24,9 +24,19 @@
 		margin: 0;
 	}
 
-	.toolsList {
-		color: var(--text-secondary);
-		padding-inline-start: 20px;
+	.tools {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-block-start: 16px;
+	}
+
+	.tool {
+		background-color: var(--primary);
+		border: 1px solid var(--text-secondary);
+		color: white;
+		padding: 4px 8px;
+		border-radius: 12px;
 	}
 
 	@media only screen and (min-width: 768px) {
