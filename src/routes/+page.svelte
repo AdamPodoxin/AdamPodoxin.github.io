@@ -89,16 +89,17 @@
 		}
 
 		.skills {
-			flex-direction: column;
-			max-height: 812px;
-			align-items: flex-start;
-			width: fit-content;
+			flex-direction: row;
 		}
 	}
 
 	@media only screen and (max-width: 767px) {
 		main {
 			padding: 0 8px;
+		}
+
+		.title {
+			margin: 32px 8px;
 		}
 
 		.projects {
