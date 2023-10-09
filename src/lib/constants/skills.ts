@@ -25,11 +25,6 @@ export const skills: Skill[] = [
 	},
 
 	{
-		title: 'Media',
-		tools: ['Unity', 'Godot', 'Blender', 'Photoshop', 'Premiere Pro', 'After Effects', 'Audacity']
-	},
-
-	{
 		title: 'Web Development',
 		tools: [
 			'HTML',
@@ -48,6 +43,11 @@ export const skills: Skill[] = [
 	},
 
 	{ title: 'Mobile Development', tools: ['Flutter', 'Android Studio', 'React Native'] },
+
+	{
+		title: 'Media',
+		tools: ['Unity', 'Godot', 'Blender', 'Photoshop', 'Premiere Pro', 'After Effects', 'Audacity']
+	},
 
 	{ title: 'Microsoft Office', tools: ['Word', 'Powerpoint', 'Excel'] },
 
