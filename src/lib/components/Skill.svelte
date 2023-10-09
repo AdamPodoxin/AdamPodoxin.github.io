@@ -18,22 +18,26 @@
 		background-color: var(--secondary);
 		border-radius: 16px;
 		padding: 24px;
-		min-width: 200px;
 	}
 
 	.title {
 		margin: 0;
-		display: flex;
-		justify-content: space-between;
 	}
 
 	.toolsList {
 		color: var(--text-secondary);
+		padding-inline-start: 20px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.skill {
+			width: 230px;
+		}
 	}
 
 	@media only screen and (max-width: 767px) {
 		.skill {
-			flex-grow: 1;
+			width: 100%;
 		}
 	}
 </style>

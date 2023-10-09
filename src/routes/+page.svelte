@@ -87,6 +87,13 @@
 		main {
 			padding: 0 64px;
 		}
+
+		.skills {
+			flex-direction: column;
+			max-height: 812px;
+			align-items: flex-start;
+			width: fit-content;
+		}
 	}
 
 	@media only screen and (max-width: 767px) {
