@@ -41,7 +41,7 @@
 
 	@media only screen and (min-width: 768px) {
 		.skill {
-			width: 290px;
+			width: 280px;
 		}
 	}
 
