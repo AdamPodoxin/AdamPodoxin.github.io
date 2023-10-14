@@ -18,6 +18,8 @@ export const processTopic = (str: string) => {
 			return 'Discord.js';
 		case 'fly':
 			return 'Fly.io';
+		case 'fastapi':
+			return 'FastAPI';
 		case 'sveltekit':
 			return 'SvelteKit';
 		default:
