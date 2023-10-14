@@ -49,7 +49,8 @@ const topicsOrder = [
 	'dart',
 	'discordjs',
 	'python',
-	'flask'
+	'fastapi',
+	'uvicorn'
 ] as const;
 const topicsOrderMap = new Map<string, number>();
 topicsOrder.forEach((topic, i) => topicsOrderMap.set(topic, i + 1));
