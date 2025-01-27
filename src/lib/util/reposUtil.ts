@@ -4,6 +4,7 @@ const reposOrder = [
 	'Podoxin Four Website',
 	'Night Mare',
 	'Morphology Etymology Analyzer',
+	'Political Sentiment Analysis',
 	'AdamPodoxin.github.io',
 	'Assignment Tracker',
 	'Spotify Playlist Stats',
