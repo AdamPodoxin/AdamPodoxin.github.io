@@ -10,6 +10,7 @@ topicsFormattedMap.set('discordjs', 'Discord.js');
 topicsFormattedMap.set('fly', 'Fly.io');
 topicsFormattedMap.set('fastapi', 'FastAPI');
 topicsFormattedMap.set('sveltekit', 'SvelteKit');
+topicsFormattedMap.set('nltk', 'NLTK');
 
 export const formatTopic = (topic: string) => {
 	const topicFormatted = topicsFormattedMap.get(topic);
