@@ -53,5 +53,5 @@ export const skills: Skill[] = [
 
 	{ title: 'Microsoft Office', tools: ['Word', 'Powerpoint', 'Excel'] },
 
-	{ title: 'Academic', tools: ['MATLAB', 'LaTex'] }
+	{ title: 'Academic', tools: ['MATLAB', 'LaTex', 'Praat'] }
 ];
