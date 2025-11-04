@@ -1,7 +1,23 @@
 import type { Skill } from '$lib/types';
 
 export const skills: Skill[] = [
-	{ title: 'Languages', tools: ['C', 'C++', 'C#', 'Java', 'Python', 'Rust', 'Go', 'Dart'] },
+	{
+		title: 'Languages',
+		tools: [
+			'C',
+			'C++',
+			'C#',
+			'Java',
+			'Python',
+			'HTML',
+			'CSS',
+			'JavaScript/TypeScript',
+			'Rust',
+			'Go',
+			'Dart',
+			'Ruby'
+		]
+	},
 
 	{
 		title: 'Cloud Computing',
@@ -13,16 +29,24 @@ export const skills: Skill[] = [
 			'.NET',
 			'Firebase',
 			'Fly.io',
+			'AWS',
 			'EC2',
 			'ECS',
-			'S3',
+			'SQS',
+			'SNS',
 			'Lambda',
+			'Fargate',
+			'S3',
+			'DynamoDB',
+			'Aurora',
 			'SQL',
 			'MySQL',
 			'PostgreSQL',
 			'MongoDB',
+			'Neon',
 			'PlanetScale',
-			'Supabase'
+			'Supabase',
+			'Terraform'
 		]
 	},
 
@@ -41,6 +65,21 @@ export const skills: Skill[] = [
 			'Vite',
 			'Vercel',
 			'jQuery'
+		]
+	},
+
+	{
+		title: 'AI and Data Science',
+		tools: [
+			'Pandas',
+			'Numpy',
+			'Matplotlib',
+			'Scikit-Learn',
+			'NLTK',
+			'spaCy',
+			'coreferee',
+			'beautifulsoup',
+			'Selenium'
 		]
 	},
 
