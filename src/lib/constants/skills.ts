@@ -75,6 +75,7 @@ export const skills: Skill[] = [
 			'Numpy',
 			'Matplotlib',
 			'Scikit-Learn',
+			'SciPi',
 			'NLTK',
 			'spaCy',
 			'coreferee',
