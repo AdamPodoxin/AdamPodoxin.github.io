@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
 @import url('https://fonts.googleapis.com/css?family=Domine:500|Domine:400');
 
+:root {
+	--tile-size: 384px;
+}
+
 body {
 	font-family: 'Poppins';
 	font-weight: 400;

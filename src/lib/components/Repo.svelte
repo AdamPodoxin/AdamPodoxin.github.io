@@ -103,7 +103,7 @@
 
 	@media only screen and (min-width: 768px) {
 		.repo {
-			width: 512px;
+			width: var(--tile-size);
 		}
 	}
 </style>
