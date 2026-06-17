@@ -8,6 +8,8 @@
 	import Mail from '$lib/icons/Mail.svelte';
 	import LinkedIn from '$lib/icons/LinkedIn.svelte';
 
+	import headshot from '../assets/Headshot_Cropped.jpg';
+
 	import '$lib/styles/global.css';
 	// import '$lib/styles/colors-green.css';
 	import '$lib/styles/colors-blue.css';
@@ -17,22 +19,31 @@
 </script>
 
 <header>
-	<section class="title">
-		<h1>Adam Podoxin</h1>
-		<h4>Versatile programmer and perpetual learner</h4>
-	</section>
+	<div class="profile">
+		<img class="headshot" src={headshot} alt="Adam Podoxin" />
 
-	<section class="links">
-		<a href="mailto:adam.podoxin@gmail.com" target="_blank" referrerpolicy="no-referrer">
-			<Mail />
-		</a>
-		<a href="https://github.com/AdamPodoxin" target="_blank" referrerpolicy="no-referrer">
-			<GitHub />
-		</a>
-		<a href="https://www.linkedin.com/in/adam-podoxin" target="_blank" referrerpolicy="no-referrer">
-			<LinkedIn />
-		</a>
-	</section>
+		<div class="profile-info">
+			<h1>Adam Podoxin</h1>
+
+			<section class="links">
+				<a href="mailto:adam.podoxin@gmail.com" target="_blank" referrerpolicy="no-referrer">
+					<Mail />
+				</a>
+
+				<a href="https://github.com/AdamPodoxin" target="_blank" referrerpolicy="no-referrer">
+					<GitHub />
+				</a>
+
+				<a
+					href="https://www.linkedin.com/in/adam-podoxin"
+					target="_blank"
+					referrerpolicy="no-referrer"
+				>
+					<LinkedIn />
+				</a>
+			</section>
+		</div>
+	</div>
 </header>
 
 <main>
@@ -56,23 +67,42 @@
 </main>
 
 <style>
-	.title {
+	header {
+		display: flex;
+		justify-content: center;
+	}
+
+	.profile {
+		--headshot-size: 160px;
+		display: flex;
+		align-items: center;
+		gap: 28px;
 		margin: 32px;
 	}
 
-	.title > h1,
-	.title > h4 {
-		text-align: center;
-		margin: 8px;
+	.headshot {
+		width: var(--headshot-size);
+		height: var(--headshot-size);
+		border-radius: 50%;
+		object-fit: cover;
+		flex-shrink: 0;
 	}
 
-	.title > h4 {
-		color: var(--text-secondary);
+	.profile-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 32px;
+		height: var(--headshot-size);
+	}
+
+	.profile-info > h1 {
+		margin: 0;
+		line-height: 1.1;
 	}
 
 	.links {
 		display: flex;
-		justify-content: center;
 		gap: 32px;
 	}
 
@@ -102,8 +132,14 @@
 			padding: 0 8px;
 		}
 
-		.title {
+		.profile {
+			--headshot-size: 120px;
 			margin: 32px 8px;
+			gap: 20px;
+		}
+
+		.profile-info > h1 {
+			font-size: 2rem;
 		}
 
 		.projects {
