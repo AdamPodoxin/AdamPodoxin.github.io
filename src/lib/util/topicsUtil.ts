@@ -12,6 +12,8 @@ topicsFormattedMap.set('fastapi', 'FastAPI');
 topicsFormattedMap.set('sveltekit', 'SvelteKit');
 topicsFormattedMap.set('nltk', 'NLTK');
 topicsFormattedMap.set('bert', 'BERT');
+topicsFormattedMap.set('scibert', 'SciBERT');
+topicsFormattedMap.set('scirepeval', 'SciRepEval');
 topicsFormattedMap.set('huggingface', 'HuggingFace');
 topicsFormattedMap.set('pytorch', 'PyTorch');
 topicsFormattedMap.set('qlora', 'QLoRA');
