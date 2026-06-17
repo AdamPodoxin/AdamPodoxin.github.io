@@ -23,7 +23,7 @@
 		<img class="headshot" src={headshot} alt="Adam Podoxin" />
 
 		<div class="profile-info">
-			<h1>Adam Podoxin</h1>
+			<h1 class="name">Adam Podoxin</h1>
 
 			<section class="links">
 				<a href="mailto:adam.podoxin@gmail.com" target="_blank" referrerpolicy="no-referrer">
@@ -96,9 +96,11 @@
 		height: var(--headshot-size);
 	}
 
-	.profile-info > h1 {
+	.name {
 		margin: 0;
 		line-height: 1.1;
+		font-family: 'Domine';
+		font-weight: 500;
 	}
 
 	.links {
@@ -138,7 +140,7 @@
 			gap: 20px;
 		}
 
-		.profile-info > h1 {
+		.name {
 			font-size: 2rem;
 		}
 
