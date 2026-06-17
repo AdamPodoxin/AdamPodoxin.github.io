@@ -26,6 +26,8 @@ topicsFormattedMap.set('ddim', 'DDIM');
 topicsFormattedMap.set('psd-loss', 'PSD Loss');
 topicsFormattedMap.set('unet', 'U-Net');
 topicsFormattedMap.set('vqvae', 'VQVAE');
+topicsFormattedMap.set('github-api', 'GitHub API');
+topicsFormattedMap.set('github-pages', 'GitHub Pages');
 
 export const formatTopic = (topic: string) => {
 	const topicFormatted = topicsFormattedMap.get(topic);
