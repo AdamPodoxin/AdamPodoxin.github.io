@@ -6,6 +6,7 @@
 	import Skill from '$lib/components/Skill.svelte';
 	import GitHub from '$lib/icons/GitHub.svelte';
 	import Mail from '$lib/icons/Mail.svelte';
+	import LinkedIn from '$lib/icons/LinkedIn.svelte';
 
 	import '$lib/styles/global.css';
 	// import '$lib/styles/colors-green.css';
@@ -27,6 +28,9 @@
 		</a>
 		<a href="https://github.com/AdamPodoxin" target="_blank" referrerpolicy="no-referrer">
 			<GitHub />
+		</a>
+		<a href="https://www.linkedin.com/in/adam-podoxin" target="_blank" referrerpolicy="no-referrer">
+			<LinkedIn />
 		</a>
 	</section>
 </header>
