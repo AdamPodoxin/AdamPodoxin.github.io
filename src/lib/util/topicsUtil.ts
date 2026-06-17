@@ -76,7 +76,8 @@ const topicsOrder = [
 	'bert',
 	'scibert',
 	'unet',
-	'vqvae'
+	'vqvae',
+	'sveltekit',
 ] as const;
 
 const topicsOrderMap = new Map<string, number>();
