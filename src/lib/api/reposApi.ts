@@ -11,6 +11,7 @@ export const getPortolioRepos = async () => {
 		})
 	).data
 		.filter((repo) => repo.topics?.includes('for-portfolio'))
+		.sort((repo1, repo2) => sortRepos(repo1.name, repo2.name))
 		.map((repo) => ({
 			name: formatRepoName(repo.name),
 			description: repo.description!,
@@ -20,8 +21,7 @@ export const getPortolioRepos = async () => {
 				.map(formatTopic),
 			homepage: repo.homepage!,
 			repoUrl: repo.private ? null : repo.html_url
-		}))
-		.sort(sortRepos);
+		}));
 
 	return repos;
 };

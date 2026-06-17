@@ -1,16 +1,35 @@
-import type { Repo } from '$lib/types';
+const reposFormattedMap = new Map<string, string>();
+reposFormattedMap.set('fasc', 'FASC');
+reposFormattedMap.set('llm-lora-chapterization', 'LLM LoRA Chapterization');
+reposFormattedMap.set('layman-scientific-embeddings', 'LaySciSearch');
+
+export const formatRepoName = (repoName: string) => {
+	const repoFormatted = reposFormattedMap.get(repoName);
+
+	if (repoFormatted) {
+		return repoFormatted;
+	}
+
+	return repoName
+		.split('-')
+		.map((str) => str[0].toUpperCase() + str.slice(1))
+		.join(' ');
+};
 
 const reposOrder = [
-	'Podoxin Four Website',
-	'Night Mare',
-	'Morphology Etymology Analyzer',
-	'Political Sentiment Analysis',
+	'layman-scientific-embeddings',
+	'llm-lora-chapterization',
+	'diffusion-weather-downscaling',
+	'political-sentiment-analysis-classification',
+	'morphology-etymology-analyzer',
+	'podoxin-four-website',
+	'night-mare',
 	'AdamPodoxin.github.io',
-	'Assignment Tracker',
-	'Spotify Playlist Stats',
-	'Carpool',
-	'Fall Hacks 2023',
-	'FASC'
+	'assignment-tracker',
+	'spotify-playlist-stats',
+	'carpool',
+	'fall-hacks-2023',
+	'fasc'
 ] as const;
 
 const reposOrderMap = new Map<string, number>();
@@ -18,11 +37,5 @@ reposOrder.forEach((repoName, i) => reposOrderMap.set(repoName, i + 1));
 
 const getRepoPriority = (repoName: string) => reposOrderMap.get(repoName) || reposOrder.length + 1;
 
-export const sortRepos = (repo1: Repo, repo2: Repo) =>
-	getRepoPriority(repo1.name) - getRepoPriority(repo2.name);
-
-export const formatRepoName = (repoName: string) =>
-	repoName
-		.split('-')
-		.map((str) => str[0].toUpperCase() + str.slice(1))
-		.join(' ');
+export const sortRepos = (repoSlug1: string, repoSlug2: string) =>
+	getRepoPriority(repoSlug1) - getRepoPriority(repoSlug2);

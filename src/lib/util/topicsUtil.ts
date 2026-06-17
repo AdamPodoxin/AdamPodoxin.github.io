@@ -11,6 +11,19 @@ topicsFormattedMap.set('fly', 'Fly.io');
 topicsFormattedMap.set('fastapi', 'FastAPI');
 topicsFormattedMap.set('sveltekit', 'SvelteKit');
 topicsFormattedMap.set('nltk', 'NLTK');
+topicsFormattedMap.set('bert', 'BERT');
+topicsFormattedMap.set('huggingface', 'HuggingFace');
+topicsFormattedMap.set('pytorch', 'PyTorch');
+topicsFormattedMap.set('qlora', 'QLoRA');
+topicsFormattedMap.set('lora', 'LoRA');
+topicsFormattedMap.set('sentence-transformers', 'SentenceTransformers');
+topicsFormattedMap.set('unsloth', 'unsloth');
+topicsFormattedMap.set('vllm', 'vLLM');
+topicsFormattedMap.set('ytseg', 'YTSeg');
+topicsFormattedMap.set('ddim', 'DDIM');
+topicsFormattedMap.set('psd-loss', 'PSD Loss');
+topicsFormattedMap.set('unet', 'U-Net');
+topicsFormattedMap.set('vqvae', 'VQVAE');
 
 export const formatTopic = (topic: string) => {
 	const topicFormatted = topicsFormattedMap.get(topic);
@@ -47,7 +60,19 @@ const topicsOrder = [
 	'discordjs',
 	'python',
 	'fastapi',
-	'uvicorn'
+	'uvicorn',
+	'vllm',
+	'unsloth',
+	'pytorch',
+	'sentence-transformers',
+	'huggingface',
+	'qlora',
+	'lora',
+	'qwen3',
+	'bert',
+	'scibert',
+	'unet',
+	'vqvae'
 ] as const;
 
 const topicsOrderMap = new Map<string, number>();
