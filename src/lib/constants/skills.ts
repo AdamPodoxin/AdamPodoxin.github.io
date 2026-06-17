@@ -32,10 +32,9 @@ export const skills: Skill[] = [
 			'vLLM',
 			'unsloth',
 			'OpenRouter',
-			'Scikit-Learn',
+			'Scikit-learn',
 			'spaCy',
 			'NLTK',
-			'SciPy',
 			'coreferee'
 		]
 	},
@@ -43,10 +42,11 @@ export const skills: Skill[] = [
 	{
 		title: 'Data Science',
 		tools: [
-			'Pandas',
+			'pandas',
 			'NumPy',
 			'Matplotlib',
-			'Seaborn',
+			'seaborn',
+			'SciPy',
 			'Jupyter Notebooks',
 			'Databricks',
 			'BeautifulSoup',
