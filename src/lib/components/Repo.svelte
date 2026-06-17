@@ -1,5 +1,6 @@
 <script lang="ts">
 	import GitHub from '$lib/icons/GitHub.svelte';
+	import Link from '$lib/icons/Link.svelte';
 	import type { Repo } from '$lib/types';
 
 	export let repo: Repo;
@@ -9,15 +10,18 @@
 	<section class="content">
 		<h5 class="name">
 			{#if repo.homepage}
-				<a href={repo.homepage} target="_blank" referrerpolicy="no-referrer">
+				<a class="homepage" href={repo.homepage} target="_blank" referrerpolicy="no-referrer">
 					{repo.name}
+					<Link />
 				</a>
 			{:else}
 				{repo.name}
 			{/if}
 
 			{#if repo.repoUrl}
-				<a href={repo.repoUrl} target="_blank" referrerpolicy="no-referrer"> <GitHub /></a>
+				<a class="repo-link" href={repo.repoUrl} target="_blank" referrerpolicy="no-referrer">
+					<GitHub />
+				</a>
 			{/if}
 		</h5>
 		<p class="description">{repo.description}</p>
@@ -43,12 +47,37 @@
 	.name {
 		margin: 0;
 		display: flex;
-		justify-content: space-between;
+		align-items: center;
+		gap: 12px;
 		color: var(--text);
 	}
 
 	.name > a {
 		color: var(--text);
+	}
+
+	.name > a.homepage {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.name > a.homepage :global(svg) {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		margin-left: 0.1em;
+		vertical-align: -0.125em;
+		fill: currentColor;
+	}
+
+	.name > a.repo-link {
+		flex-shrink: 0;
+		line-height: 0;
+	}
+
+	.name > a.repo-link :global(svg) {
+		height: 24px;
+		width: 24px;
 	}
 
 	.name > a:hover {
@@ -74,7 +103,7 @@
 
 	@media only screen and (min-width: 768px) {
 		.repo {
-			width: 380px;
+			width: 512px;
 		}
 	}
 </style>
