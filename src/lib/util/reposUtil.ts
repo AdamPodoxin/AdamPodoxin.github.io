@@ -3,6 +3,7 @@ reposFormattedMap.set('lait', 'LAIT - Literary AI Translation');
 reposFormattedMap.set('fasc', 'FASC');
 reposFormattedMap.set('llm-lora-chapterization', 'LLM LoRA Chapterization');
 reposFormattedMap.set('layman-scientific-embeddings', 'LaySciSearch');
+reposFormattedMap.set('sFront', 'sFront');
 
 export const formatRepoName = (repoName: string) => {
 	const repoFormatted = reposFormattedMap.get(repoName);
@@ -27,6 +28,7 @@ const reposOrder = [
 	'morphology-etymology-analyzer',
 	'podoxin-four-website',
 	'night-mare',
+	'sfront',
 	'assignment-tracker',
 	'spotify-playlist-stats',
 	'carpool',
