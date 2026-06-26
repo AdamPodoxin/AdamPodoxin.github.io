@@ -8,14 +8,14 @@
 	import Mail from '$lib/icons/Mail.svelte';
 	import LinkedIn from '$lib/icons/LinkedIn.svelte';
 	import XTwitter from '$lib/icons/X-twitter.svelte';
+	import GoogleScholar from '$lib/icons/GoogleScholar.svelte';
+	import BlueSky from '$lib/icons/BlueSky.svelte';
 
 	import headshot from '../assets/Headshot_Cropped.jpg';
 
 	import '$lib/styles/global.css';
 	// import '$lib/styles/colors-green.css';
 	import '$lib/styles/colors-blue.css';
-	import GoogleScholar from '$lib/icons/GoogleScholar.svelte';
-	import BlueSky from '$lib/icons/BlueSky.svelte';
 
 	export let data: PageData;
 	const { repos } = data;
@@ -135,7 +135,9 @@
 
 	.links {
 		display: flex;
-		gap: 32px;
+		row-gap: 4px;
+		column-gap: 32px;
+		flex-wrap: wrap;
 	}
 
 	.projects,
@@ -172,6 +174,14 @@
 
 		.name {
 			font-size: 2rem;
+		}
+
+		.profile-info {
+			gap: 8px;
+		}
+
+		.links {
+			column-gap: 16px;
 		}
 
 		.projects {

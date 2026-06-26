@@ -1,4 +1,5 @@
 const reposFormattedMap = new Map<string, string>();
+reposFormattedMap.set('lait', 'LAIT - Literary AI Translation');
 reposFormattedMap.set('fasc', 'FASC');
 reposFormattedMap.set('llm-lora-chapterization', 'LLM LoRA Chapterization');
 reposFormattedMap.set('layman-scientific-embeddings', 'LaySciSearch');
@@ -17,6 +18,7 @@ export const formatRepoName = (repoName: string) => {
 };
 
 const reposOrder = [
+	'lait',
 	'layman-scientific-embeddings',
 	'llm-lora-chapterization',
 	'political-sentiment-analysis-classification',

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Arxiv from '$lib/icons/Arxiv.svelte';
 	import GitHub from '$lib/icons/GitHub.svelte';
 	import Link from '$lib/icons/Link.svelte';
 	import type { Repo } from '$lib/types';
@@ -16,6 +17,18 @@
 				</a>
 			{:else}
 				{repo.name}
+			{/if}
+
+			{#if repo.paperUrl}
+				<a
+					class="repo-link"
+					href={repo.paperUrl}
+					target="_blank"
+					referrerpolicy="no-referrer"
+					style="text-decoration: none;"
+				>
+					<Arxiv />
+				</a>
 			{/if}
 
 			{#if repo.repoUrl}
@@ -47,7 +60,7 @@
 	.name {
 		margin: 0;
 		display: flex;
-		align-items: center;
+		align-items: start;
 		gap: 12px;
 		color: var(--text);
 	}
