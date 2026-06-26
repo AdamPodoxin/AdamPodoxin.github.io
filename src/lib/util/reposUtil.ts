@@ -19,12 +19,12 @@ export const formatRepoName = (repoName: string) => {
 const reposOrder = [
 	'layman-scientific-embeddings',
 	'llm-lora-chapterization',
-	'diffusion-weather-downscaling',
 	'political-sentiment-analysis-classification',
+	'diffusion-weather-downscaling',
+	'adampodoxin.github.io',
 	'morphology-etymology-analyzer',
 	'podoxin-four-website',
 	'night-mare',
-	'AdamPodoxin.github.io',
 	'assignment-tracker',
 	'spotify-playlist-stats',
 	'carpool',
@@ -38,4 +38,4 @@ reposOrder.forEach((repoName, i) => reposOrderMap.set(repoName, i + 1));
 const getRepoPriority = (repoName: string) => reposOrderMap.get(repoName) || reposOrder.length + 1;
 
 export const sortRepos = (repoSlug1: string, repoSlug2: string) =>
-	getRepoPriority(repoSlug1) - getRepoPriority(repoSlug2);
+	getRepoPriority(repoSlug1.toLowerCase()) - getRepoPriority(repoSlug2.toLowerCase());
