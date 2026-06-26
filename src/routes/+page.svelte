@@ -49,6 +49,8 @@
 </script>
 
 <svelte:head>
+	<meta name="google-site-verification" content="bjXzIEzqiNSIJnruOfdbAV-g6vrJU8j4gdqt-wnodUg" />
+
 	<title>Adam Podoxin</title>
 	<meta name="description" content={description} />
 	<meta name="author" content="Adam Podoxin" />
