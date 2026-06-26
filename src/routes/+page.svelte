@@ -19,7 +19,64 @@
 
 	export let data: PageData;
 	const { repos } = data;
+
+	const siteUrl = 'https://adampodoxin.github.io';
+	const imageUrl = `${siteUrl}/headshot.jpg`;
+	const description =
+		"Adam Podoxin's online portfolio" +
+		' | 🎓 CS + LING @ SFU' +
+		' | 📝 NLP & Computational Linguistics researcher' +
+		' | 💻 Full-stack and cloud developer';
+
+	const sameAs = [
+		'https://github.com/AdamPodoxin',
+		'https://www.linkedin.com/in/adam-podoxin',
+		'https://scholar.google.ca/citations?user=6niqKecAAAAJ&hl=en',
+		'https://x.com/adampodoxin',
+		'https://bsky.app/profile/adampodoxin.bsky.social'
+	];
+
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Adam Podoxin',
+		url: siteUrl,
+		image: imageUrl,
+		jobTitle: 'Computer Science Researcher & Software Developer',
+		email: 'mailto:adam.podoxin@gmail.com',
+		sameAs
+	};
 </script>
+
+<svelte:head>
+	<title>Adam Podoxin</title>
+	<meta name="description" content={description} />
+	<meta name="author" content="Adam Podoxin" />
+	<meta
+		name="keywords"
+		content="Adam Podoxin, software developer, researcher, portfolio, projects, NLP, computational linguistics, web development"
+	/>
+	<link rel="canonical" href={`${siteUrl}/`} />
+
+	<meta property="og:type" content="profile" />
+	<meta property="og:title" content="Adam Podoxin" />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content={`${siteUrl}/`} />
+	<meta property="og:image" content={imageUrl} />
+	<meta property="og:image:alt" content="Adam Podoxin" />
+	<meta property="og:site_name" content="Adam Podoxin" />
+	<meta property="profile:first_name" content="Adam" />
+	<meta property="profile:last_name" content="Podoxin" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Adam Podoxin" />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={imageUrl} />
+	<meta name="twitter:creator" content="@adampodoxin" />
+
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON-LD is built from static, developer-controlled data only -->
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</${'script'}>`}
+</svelte:head>
 
 <header>
 	<div class="profile">
