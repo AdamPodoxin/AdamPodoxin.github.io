@@ -7,12 +7,15 @@
 	import GitHub from '$lib/icons/GitHub.svelte';
 	import Mail from '$lib/icons/Mail.svelte';
 	import LinkedIn from '$lib/icons/LinkedIn.svelte';
+	import XTwitter from '$lib/icons/X-twitter.svelte';
 
 	import headshot from '../assets/Headshot_Cropped.jpg';
 
 	import '$lib/styles/global.css';
 	// import '$lib/styles/colors-green.css';
 	import '$lib/styles/colors-blue.css';
+	import GoogleScholar from '$lib/icons/GoogleScholar.svelte';
+	import BlueSky from '$lib/icons/BlueSky.svelte';
 
 	export let data: PageData;
 	const { repos } = data;
@@ -35,11 +38,38 @@
 				</a>
 
 				<a
+					href="https://scholar.google.ca/citations?user=6niqKecAAAAJ&hl=en"
+					target="_blank"
+					referrerpolicy="no-referrer"
+					style="margin-left: -4px; margin-top: -2px"
+				>
+					<GoogleScholar />
+				</a>
+
+				<a
 					href="https://www.linkedin.com/in/adam-podoxin"
 					target="_blank"
 					referrerpolicy="no-referrer"
 				>
 					<LinkedIn />
+				</a>
+
+				<a
+					href="https://x.com/adampodoxin"
+					target="_blank"
+					referrerpolicy="no-referrer"
+					style="margin-left: -4px; margin-top: -4px"
+				>
+					<XTwitter />
+				</a>
+
+				<a
+					href="https://bsky.app/profile/adampodoxin.bsky.social"
+					target="_blank"
+					referrerpolicy="no-referrer"
+					style="margin-left: -4px"
+				>
+					<BlueSky />
 				</a>
 			</section>
 		</div>
